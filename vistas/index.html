@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--CSS-->
+    <!--ANIMATED.CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--ANIMATED.CSS-->
+    <!--Font Aswome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!--Font Aswome-->
+
+    <title>Developer Travel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap%27');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+        * {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            /* background-color: #F3F9A7;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;*/
+            background-color: #ffffff;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+        
+        hr {
+            border: black solid 1px !important;
+            height: 1px !important;
+            background-color: black !important;
+        }
+        
+        nav img {
+            padding-top: 25px;
+            padding-left: 60px;
+            height: 120px;
+            padding-bottom: 25px;
+        }
+        
+        nav form {
+            padding-top: 30px;
+            display: flex;
+        }
+        
+        nav form input {
+            box-shadow: rgba(221, 221, 230, 0.63) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            margin-right: 10px;
+            border: 2px solid black;
+            padding: 10px;
+            width: 500px;
+            height: 35px;
+            background-color: white;
+        }
+        
+        nav form button {
+            border: 2px solid black;
+            background-color: white;
+            height: 35px;
+            width: 35px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        nav {
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+            position: fixed;
+            z-index: 1;
+            background-color: #F29B69;
+            /*  background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/FondoB.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;*/
+            color: white !important;
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            color: white;
+            list-style: none;
+            padding: 45px 35px 35px 0px;
+        }
+        
+        nav ul li:hover {
+            transform: translateY(-2px);
+        }
+        
+        nav ul li a {
+            font-weight: bold;
+            padding: 15px;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        /*body*/
+        
+        .comtainer {
+            padding: 190px 0px 40px;
+            text-align: center;
+        }
+        
+        .comtainer img {
+            height: 300px;
+        }
+        
+        .comtainer h3 {
+            color: black;
+            font-size: 23px;
+            font-family: 'Cinzel Decorative', cursive;
+            padding-top: 35px;
+            padding-bottom: 14px;
+            text-align: center;
+        }
+        
+        .info {
+            text-align: center;
+            padding: 120px;
+            padding-bottom: 125px !important;
+            display: flex;
+        }
+        
+        .info h5 {
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: black;
+            font-family: monospace;
+            font-size: 20px;
+            padding: 25px;
+            text-align: justify;
+        }
+        
+        .text-1 {
+            color: black;
+            padding-left: 30px;
+        }
+        
+        .text-1 img {
+            height: 250px;
+        }
+        
+        .card__mayor {
+            padding-top: 100px;
+            height: auto;
+            margin-left: 100px;
+            width: 100%;
+            display: flex;
+            max-width: 1700px;
+        }
+        
+        .card {
+            height: auto;
+            width: 100%;
+            margin: 20px;
+            border-radius: 30px;
+            overflow: hidden;
+            background-color: #f29b69ce;
+            cursor: default;
+            transition: all 400ms ease;
+        }
+        
+        .card:hover {
+            box-shadow: rgba(209, 205, 205, 0.35) 0px 5px 15px;
+            transform: translateY(-10px);
+        }
+        
+        .card img {
+            height: 400px;
+        }
+        
+        .card .contenido p {
+            padding: 15px 20px 0px 20px !important;
+            font-size: 18px;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            text-align: justify;
+        }
+        
+        .card .contenido h4 {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid white;
+            font-size: 24px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .card hr {
+            color: white !important;
+            border: white 1px solid !important;
+            background-color: white !important;
+        }
+        
+        .zx {
+            display: flex;
+            color: black;
+            font-family: 'Cinzel Decorative', cursive;
+            padding: 15px;
+            justify-content: space-between;
+        }
+        
+        .card a i {
+            padding: 15px;
+            font-size: 70px;
+        }
+        
+        .aaa1 {
+            text-align: end;
+        }
+        
+        .card a {
+            text-align: center;
+            color: black;
+            transition: all 400ms ease;
+        }
+        
+        .card p {
+            font-family: 'Cinzel Decorative', cursive;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .card a:hover {
+            opacity: 0.8;
+            text-decoration: none;
+            color: black;
+            transition: all 400ms ease;
+        }
+        
+        .contenido {
+            border-bottom: 3px 1px solid white;
+            padding-bottom: 20px;
+        }
+        /*Forumalario de viaje */
+        
+        .padre__form {
+            text-align: center;
+            padding-top: 90px;
+        }
+        
+        .formulario {
+            display: inline-flex;
+            color: black;
+            padding: 25px;
+            background-color: white;
+        }
+        
+        .form__reserva {
+            display: flex;
+            width: 210px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+        
+        .dates {
+            padding: 5px;
+            display: flex;
+        }
+        
+        .dates i {
+            margin: auto;
+        }
+        
+        .dates input {
+            text-align: center;
+            border: none;
+            height: 40px;
+            margin: auto;
+            font-family: sans-serif;
+        }
+        
+        .dates input:focus {
+            border: none;
+            outline: none;
+        }
+        
+        .dates i {
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .reserva__from {
+            display: flex;
+            width: 210px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+        
+        .reserva__date {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
+        }
+        
+        .reserva__date select {
+            text-align: center;
+            height: 40px;
+            width: 170px;
+            background-color: white;
+            border: white 1px solid;
+            outline: none;
+            margin: auto;
+        }
+        
+        .reserva__date i {
+            padding: 5px;
+            margin: auto;
+        }
+        
+        .option {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        
+        .biton {
+            border: 1px solid black;
+            padding: 5px;
+            color: black !important;
+        }
+        
+        .option a {
+            text-decoration: none;
+            color: black;
+        }
+        /*body*/
+        /*footer*/
+        
+        .pie_pagina {
+            padding-top: 100px;
+        }
+        
+        footer {
+            color: black;
+            margin-top: 0px;
+            width: 100%;
+            padding: 5px 0px;
+            background-color: #F29B69;
+            /* background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
+        }
+        
+        .container__footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1300px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        
+        .box__footer {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        
+        .box__footer .logo img {
+            width: 180px;
+        }
+        
+        .box__footer .terms {
+            font-family: 'Open Sans', sans-serif;
+            max-width: 550px;
+            margin-top: 20px;
+            font-weight: 400;
+            text-align: justify;
+            color: black;
+            font-size: 18px;
+        }
+        
+        .box__footer h2 {
+            font-family: 'Open Sans', sans-serif;
+            border-bottom: black 1px solid;
+            margin-bottom: 10px;
+            color: black;
+            font-weight: 700;
+        }
+        
+        .box__footer a {
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+            margin-top: 10px;
+            color: black;
+            font-weight: 400;
+        }
+        
+        .box__footer a:hover {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.8;
+        }
+        
+        .box__footer a .fab {
+            font-size: 30px;
+        }
+        
+        .box__copyright {
+            font-family: 'Open Sans', sans-serif;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 0px 40px;
+        }
+        
+        .box__copyright p {
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 10px;
+            color: black;
+        }
+        
+        .box__copyright hr {
+            border-color: white;
+            height: 1px;
+            width: 100%;
+            background-color: white;
+        }
+        /*footer*/
+        /*Footer*/
+    </style>
+
+</head>
+
+<body>
+    <!--navegador-->
+    <header>
+        <nav class="animate__backInRight">
+            <a href="../vistas/index.html"> <img src="../img/logo_white_large.png" alt=""></a>
+
+
+            <ul>
+                <li><a href="index.html"> INICIO</a></li>
+                <li><a href="">DISTINOS</a></li>
+                <li><a href="">ITINERARIOS</a></li>
+                <li><a href="">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!--navegador-->
+    <!--body-->
+    <div class="comtainer">
+        <img src="../img/logo_large.png" alt="">
+        <h3>Disfruta de diversas aventuras en distintas ubicaciones del Perú,<br> registra de una una vez tu vuelo y despega!</h3>
+
+    </div>
+    <hr>
+
+    <div class="info">
+        <div class="text-1">
+            <a href=""> <img src="../img/wsp.png" alt=""></a>
+            <h5>Si quieres un mejor asesoramiento dale click al icono y un asesor se comunicará contigo por WhatsApp ante cualquier duda. </h5>
+        </div>
+        <div class="text-1">
+            <img src="../img/carro.png" alt="">
+            <h5>Si tienes una consulta, no se quede con las dudas! Mandé un correo a developertravel@hotmail.com y momentáneamente nos comunicaremos contigo.</h5>
+        </div>
+        <div class="text-1">
+            <img src="../img/mapa.png" alt="">
+            <h5>Nuestra sucursales se encuentran altamente operativas, disfrute de nuestra asesoría más directa y concisa. Con los protocolos correspondientes!</h5>
+        </div>
+
+
+    </div>
+    <hr>
+    <div class="padre__form">
+        <div class="formulario">
+
+            <form action="">
+                <div class="dates">
+                    <div class="form__reserva">
+                        <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
+                        <input name="city" type="text" class="form-control" id="inputCity" placeholder="Elige tu Destino">
+                    </div>
+                    <div class="form__reserva">
+                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                        <input name="check-in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
+                    </div>
+                    <div class="form__reserva">
+                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                        <input name="check-out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
+                    </div>
+                </div>
+                <div class="reserva__date">
+                    <div class="reserva__from">
+                        <select name="adult" class="form-control tm-select" id="adult">
+                                                <option value="">Adulto</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                    </div>
+                    <div class="reserva__from">
+                        <select name="children" id="children">
+                                                <option value="">Niño</option>
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                    </div>
+                    <div class="reserva__from">
+                        <select name="room" class="form-control tm-select" id="room">
+                                                <option value="">Habitación</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                        <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                    </div>
+
+                </div>
+                <div class="option">
+
+                    <a href="" class="biton">Reservar</a>
+                    <a href="#" class="">¿Necesitas Ayuda?</a>
+
+
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+    <div class="card__mayor">
+        <div class="card" id="tarjeta_1">
+            <img src="../img/pisco2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Pisco</h4>
+                    <h4>Desde el 30/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 54.01</p>
+                <p><b> Precio Final: </b> S/ 220.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../vistas/pag_pisco.html"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/tarapoto2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Tarapoto</h4>
+                    <h4>Desde el 24/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 154.01</p>
+                <p><b> Precio Final: </b> S/ 625.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../vistas/pag_tarapoto.html" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/pucallpa1.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Pucallpa</h4>
+                    <h4>Desde el 14/12/21</h4>
+                </div>
+                <p> <b>Precio Final: </b>USD 114.01</p>
+                <p><b>Precio Final: </b> S/ 450.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="card__mayor">
+        <div class="card" id="tarjeta_1">
+            <img src="../img/arequipa2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Arequipa</h4>
+                    <h4>Desde el 12/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 30.01</p>
+                <p><b> Precio Final: </b> S/ 125.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="/vistas/arequipa.html" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/cusco2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Cusco</h4>
+                    <h4>Desde el 09/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 46.93</p>
+                <p><b> Precio Final: </b> S/ 191.38</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../vistas/cusco.html" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/piura.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Piura</h4>
+                    <h4>Desde el 01/01/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 33.58</p>
+                <p><b> Precio Final: </b> S/ 137.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+    <!--body-->
+
+    <!--footer-->
+    <div class="pie_pagina">
+        <footer>
+            <div class="container__footer">
+                <div class="box__footer">
+                    <div class="logo">
+                        <img src="../img/logo_white_large.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p>DeveloperTravel.com es una nueva agencia de viajes, una iniciativa digital ¿El objetivo? Crear una experiencia única en la compra de servicios turísticos, combinando la tecnología más robusta de los viajes online con la gran experiencia
+                            y respaldo de los grandes jugadores del comercio tradicional.</p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h2>Destinos</h2>
+                    <a href="#">Proyecto 01</a>
+                    <a href="#">Proyecto 02</a>
+                    <a href="#">Proyecto 03</a>
+                    <a href="#">Proyecto 04</a>
+                </div>
+                <div class="box__footer">
+                    <h2>Contacto</h2>
+                    <a href="#">Colegio</a>
+                    <a href="#">Información</a>
+                    <a href="#">Instituto</a>
+                    <a href="#">Contacto</a>
+                </div>
+                <div class="box__footer">
+                    <h2>Redes Sociales</h2>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="https://api.whatsapp.com/send?phone=+51979043472&text=Hola%20Samuel!!%20me%20gusto%20mucho%20el%20dise%C3%B1o%20de%20tu%20pagina" target="_blank"><i class="fab fa-whatsapp-square"></i> WhatsApp</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+            </div>
+            <div class="box__copyright">
+                <hr>
+                <p><b>Todos los derechos reservados © 2021 Samuel Lls</p>
+    </div>
+</footer>
+</div>
+<!--footer-->
+
+
+
+
+
+</body>
+
+</html>

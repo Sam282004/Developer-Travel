@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap%27');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 * {
     max-width: 100%;
     margin: 0;
@@ -10,16 +7,16 @@
 
 body {
     /* background-color: #F3F9A7;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;*/
-    background-image: url(img/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;*/
+    background-image: url(../img/Fondo.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    color: white;
+    color: black;
 }
 
 nav img {
@@ -29,312 +26,79 @@ nav img {
     padding-bottom: 25px;
 }
 
-nav form {
-    padding-top: 30px;
-    display: flex;
-}
-
-nav form input {
-    box-shadow: rgba(221, 221, 230, 0.63) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    margin-right: 10px;
-    border: 2px solid black;
-    padding: 10px;
-    width: 500px;
-    height: 35px;
-    background-color: white;
-}
-
-nav form button {
-    border: 2px solid black;
-    background-color: white;
-    height: 35px;
-    width: 35px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-
 nav {
     width: 100%;
-    border-bottom: black 3px solid;
     justify-content: space-between;
     display: flex;
     position: fixed;
     z-index: 1;
-    background-color: black;
-    /*  background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/FondoB.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;*/
-    color: white !important;
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    color: white;
-    list-style: none;
-    padding: 45px 35px 35px 0px;
-}
-
-nav ul li:hover {
-    transform: translateY(-2px);
-}
-
-nav ul li a {
-    font-weight: bold;
-    padding: 15px;
-    font-family: 'Cinzel Decorative', cursive;
-    text-decoration: none;
-    color: white;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-    opacity: 0.8;
-}
-
-
-/*body*/
-
-.comtainer {
-    padding: 190px 0px 40px;
-    text-align: center;
-}
-
-.comtainer img {
-    opacity: 0.8;
-    height: 300px;
-}
-
-.comtainer h3 {
-    opacity: 0.8;
-    font-size: 23px;
-    font-family: 'Cinzel Decorative', cursive;
-    padding-top: 35px;
-    padding-bottom: 14px;
-    text-align: center;
-}
-
-.info {
-    text-align: center;
-    padding: 120px;
-    padding-bottom: 125px !important;
-    display: flex;
-}
-
-.info h5 {
-    background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+    background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/FondoB.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    color: white;
-    opacity: 0.8;
-    font-family: monospace;
-    font-size: 20px;
-    padding: 25px;
-    text-align: justify;
+    color: white !important;
 }
 
-.text-1 {
-    padding-left: 30px;
+.container {
+    padding-right: 150px;
+    padding-top: 200px;
+    text-align: right;
 }
 
-.text-1 img {
-    opacity: 0.8;
-    height: 250px;
-}
-
-.card__mayor {
-    padding-top: 100px;
-    height: auto;
-    margin-left: 100px;
-    width: 100%;
-    display: flex;
-    max-width: 1700px;
-}
-
-.card {
-    height: auto;
-    width: 100%;
-    margin: 20px;
-    border-radius: 30px;
-    overflow: hidden;
-    background-color: rgb(207, 194, 194);
-    cursor: default;
-    transition: all 400ms ease;
-}
-
-.card:hover {
-    box-shadow: rgba(209, 205, 205, 0.35) 0px 5px 15px;
-    transform: translateY(-10px);
-}
-
-.card img {
-    height: 400px;
-}
-
-.card .contenido p {
-    padding: 15px 20px 0px 20px !important;
-    font-size: 18px;
-    color: black;
-    font-family: 'Open Sans', sans-serif;
-    text-align: justify;
-}
-
-.card .contenido h4 {
-    padding-left: 10px;
-    padding-right: 10px;
-    border-bottom: 1px solid rgb(0, 0, 0);
-    font-size: 24px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.zx {
-    display: flex;
-    color: black;
-    font-family: 'Cinzel Decorative', cursive;
-    padding: 15px;
-    background-color: rgb(207, 194, 194);
-    justify-content: space-between;
-}
-
-.card a i {
-    padding: 15px;
-    font-size: 70px;
-}
-
-.aaa1 {
-    text-align: end;
-}
-
-.card a {
-    text-align: center;
-    color: black;
-    transition: all 400ms ease;
-}
-
-.card p {
-    font-family: 'Cinzel Decorative', cursive;
-    text-align: center;
-    padding: 5px;
-}
-
-.card a:hover {
-    opacity: 0.8;
-    text-decoration: none;
-    color: black;
-    transition: all 400ms ease;
-}
-
-.contenido {
-    border-bottom: 3px black solid;
-    padding-bottom: 20px;
-}
-
-
-/*body*/
-
-
-/*footer*/
-
-.pie_pagina {
-    padding-top: 100px;
-}
-
-footer {
-    color: white;
-    margin-top: 0px;
-    width: 100%;
-    padding: 5px 0px;
-    background-color: black;
-    /* background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+.text {
+    background-image: linear-gradient(to right, hsla(336, 22%, 95%, 0.198), hsla(340, 60%, 98%, 0.609)), url(img/FondoB.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: cover; */
+    background-size: cover;
+    padding: 25px;
+    text-align: center;
+    display: inline-block;
+    border-radius: .25rem;
 }
 
-.container__footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1300px;
-    margin: auto;
-    margin-top: 50px;
+.text:hover {
+    transform: translateY(-10px);
+    transition: all 400ms ease;
 }
 
-.box__footer {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+.text h1 {
+    font-weight: bold;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 54px;
+    padding-bottom: 25px;
 }
 
-.box__footer .logo img {
-    width: 180px;
+.text p {
+    text-align: justify !important;
+    font-weight: bold;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 24px;
+    padding-bottom: 25px;
 }
 
-.box__footer .terms {
-    font-family: 'Open Sans', sans-serif;
-    max-width: 550px;
-    margin-top: 20px;
-    font-weight: 700;
-    text-align: justify;
-    color: white;
-    font-size: 18px;
-}
-
-.box__footer h2 {
-    font-family: 'Open Sans', sans-serif;
-    border-bottom: white 1px solid;
-    margin-bottom: 10px;
-    color: white;
-    font-weight: 700;
-}
-
-.box__footer a {
-    font-family: 'Open Sans', sans-serif;
+.text a {
+    color: #ffffff;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: .25rem;
     text-decoration: none;
-    margin-top: 10px;
     color: white;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 23px;
     font-weight: 600;
 }
 
-.box__footer a:hover {
-    font-family: 'Open Sans', sans-serif;
-    opacity: 0.8;
+.text a:hover {
+    opacity: 0.9;
 }
 
-.box__footer a .fab {
-    font-size: 30px;
+.text div a {
+    background: linear-gradient(102deg, #000000 40%, #000000 60%);
+    border: 1px solid black;
 }
 
-.box__copyright {
-    font-family: 'Open Sans', sans-serif;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding: 0px 40px;
+.caja {
+    width: 80%;
 }
-
-.box__copyright p {
-    font-family: 'Open Sans', sans-serif;
-    margin-top: 10px;
-    color: white;
-}
-
-.box__copyright hr {
-    border-color: white;
-    height: 1px;
-    width: 100%;
-    background-color: white;
-}
-
-
-/*footer*/
-
-
-/*Footer*/

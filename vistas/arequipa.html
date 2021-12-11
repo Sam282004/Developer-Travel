@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap%27');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+        * {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            /* background-color: #F3F9A7;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;*/
+            background-image: url(../img/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            color: white;
+        }
+        
+        nav img {
+            padding-top: 25px;
+            padding-left: 60px;
+            height: 120px;
+            padding-bottom: 25px;
+        }
+        
+        nav form {
+            padding-top: 30px;
+            display: flex;
+        }
+        
+        nav form input {
+            box-shadow: rgba(221, 221, 230, 0.63) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            margin-right: 10px;
+            border: 2px solid black;
+            padding: 10px;
+            width: 500px;
+            height: 35px;
+            background-color: white;
+        }
+        
+        nav form button {
+            border: 2px solid black;
+            background-color: white;
+            height: 35px;
+            width: 35px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        nav {
+            width: 100%;
+            border-bottom: black 3px solid;
+            justify-content: space-between;
+            display: flex;
+            position: fixed;
+            z-index: 1;
+            background-color: black;
+            /*  background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/FondoB.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;*/
+            color: white !important;
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            color: white;
+            list-style: none;
+            padding: 45px 35px 35px 0px;
+        }
+        
+        nav ul li:hover {
+            transform: translateY(-2px);
+        }
+        
+        nav ul li a {
+            font-weight: bold;
+            padding: 15px;
+            font-family: 'Cinzel Decorative', cursive;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        
+        .card__mayor {
+            padding-top: 100px;
+            height: auto;
+            margin-left: 100px;
+            width: 100%;
+            display: flex;
+            max-width: 1700px;
+        }
+        
+        .card {
+            height: auto;
+            width: 100%;
+            margin: 20px;
+            border-radius: 30px;
+            overflow: hidden;
+            background-color: rgb(207, 194, 194);
+            cursor: default;
+            transition: all 400ms ease;
+        }
+        
+        .card:hover {
+            box-shadow: rgba(209, 205, 205, 0.35) 0px 5px 15px;
+            transform: translateY(-10px);
+        }
+        
+        .card img {
+            height: 400px;
+        }
+        
+        .card .contenido p {
+            padding: 15px 20px 0px 20px !important;
+            font-size: 18px;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            text-align: justify;
+        }
+        
+        .card .contenido h4 {
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid rgb(0, 0, 0);
+            font-size: 24px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .zx {
+            display: flex;
+            color: black;
+            font-family: 'Cinzel Decorative', cursive;
+            padding: 15px;
+            background-color: rgb(207, 194, 194);
+            justify-content: space-between;
+        }
+        
+        .card a i {
+            padding: 15px;
+            font-size: 70px;
+        }
+        
+        .aaa1 {
+            text-align: end;
+        }
+        
+        .card a {
+            text-align: center;
+            color: black;
+            transition: all 400ms ease;
+        }
+        
+        .card p {
+            font-family: 'Cinzel Decorative', cursive;
+            text-align: center;
+            padding: 5px;
+        }
+        
+        .card a:hover {
+            opacity: 0.8;
+            text-decoration: none;
+            color: black;
+            transition: all 400ms ease;
+        }
+        
+        .contenido {
+            border-bottom: 3px black solid;
+            padding-bottom: 20px;
+        }
+        /*footer*/
+        
+        .pie_pagina {
+            padding-top: 100px;
+        }
+        
+        footer {
+            color: white;
+            margin-top: 0px;
+            width: 100%;
+            padding: 5px 0px;
+            background-color: black;
+            /* background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
+        }
+        
+        .container__footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1300px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        
+        .box__footer {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        
+        .box__footer .logo img {
+            width: 180px;
+        }
+        
+        .box__footer .terms {
+            font-family: 'Open Sans', sans-serif;
+            max-width: 550px;
+            margin-top: 20px;
+            font-weight: 700;
+            text-align: justify;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .box__footer h2 {
+            font-family: 'Open Sans', sans-serif;
+            border-bottom: white 1px solid;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .box__footer a {
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+            margin-top: 10px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .box__footer a:hover {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.8;
+        }
+        
+        .box__footer a .fab {
+            font-size: 30px;
+        }
+        
+        .box__copyright {
+            font-family: 'Open Sans', sans-serif;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 0px 40px;
+        }
+        
+        .box__copyright p {
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 10px;
+            color: white;
+        }
+        
+        .box__copyright hr {
+            border-color: white;
+            height: 1px;
+            width: 100%;
+            background-color: white;
+        }
+        
+        form {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .carrusel {
+            width: 100%;
+            height: 100%;
+        }
+        
+        h5 {
+            color: rgb(10, 10, 10);
+            text-align: center;
+        }
+        
+        .card-text {
+            margin-bottom: o;
+            color: black;
+        }
+        
+        .boton {
+            padding: 15px;
+            justify-content: right;
+            text-align: right;
+        }
+        
+        .tarjeta {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .card-text {
+            color: rgb(2, 2, 2);
+        }
+        
+        .card-body {
+            background-color: rgb(107, 103, 103);
+        }
+        
+        .cardUno {
+            padding-right: 15px;
+        }
+        
+        .cardDos {
+            padding-left: 15px;
+        }
+        /*footer*/
+    </style>
+</head>
+
+<body>
+    <!--navegador-->
+    <header>
+        <nav class="animate__backInRight">
+            <a href="../vistas/index.html"> <img src="../img/logo_white_large.png" alt=""></a>
+
+
+            <ul>
+                <li><a href="index.html"> INICIO</a></li>
+                <li><a href="">DISTINOS</a></li>
+                <li><a href="">ITINERARIOS</a></li>
+                <li><a href="">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!--navegador-->
+    <!--body-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/arequipa car1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/arequipa car2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/arequipa car3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+    </div>
+    <div class="tarjeta">
+        <div class="cardUno" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Destino</h5>
+                <p class="card-text">Arequipa es la capital de la época colonial de la región de Arequipa en Perú. La rodean 3 volcanes y cuenta con edificios barrocos construidos de sillar, una piedra volcánica blanca. </p>
+
+            </div>
+        </div>
+        <div class="cardDos" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Requisitos</h5>
+                <p class="card-text">Arequipa es la capital de la época colonial de la región de Arequipa en Perú. La rodean 3 volcanes y cuenta con edificios barrocos construidos de sillar, una piedra volcánica blanca.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--body-->
+
+
+
+
+
+
+    <div class="card__mayor">
+        <div class="card" id="tarjeta_1">
+            <img src="../img/pisco2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Pisco</h4>
+                    <h4>Desde el 30/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 54.01</p>
+                <p><b> Precio Final: </b> S/ 220.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../vistas/pag_pisco.html"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/tarapoto2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Tarapoto</h4>
+                    <h4>Desde el 24/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 154.01</p>
+                <p><b> Precio Final: </b> S/ 625.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../vistas/pag_tarapoto.html" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/pucallpa1.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Pucallpa</h4>
+                    <h4>Desde el 14/12/21</h4>
+                </div>
+                <p> <b>Precio Final: </b>USD 114.01</p>
+                <p><b>Precio Final: </b> S/ 450.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="card__mayor">
+        <div class="card" id="tarjeta_1">
+            <img src="../img/arequipa2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Arequipa</h4>
+                    <h4>Desde el 12/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 30.01</p>
+                <p><b> Precio Final: </b> S/ 125.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="/vistas/arequipa.html" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/cusco2.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Cusco</h4>
+                    <h4>Desde el 09/12/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 46.93</p>
+                <p><b> Precio Final: </b> S/ 191.38</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="../vistas/cusco.html" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+        <div class="card" id="tarjeta_1">
+            <img src="../img/piura.jpg" alt="">
+            <div class="contenido compu">
+                <div class="zx">
+                    <h4>Piura</h4>
+                    <h4>Desde el 01/01/21</h4>
+                </div>
+                <p> <b> Precio Final: </b>USD 33.58</p>
+                <p><b> Precio Final: </b> S/ 137.01</p>
+                <p><b>Tasas incluidas · Vuelo directo </b> </p>
+            </div>
+            <hr>
+            <div class="aaa1">
+                <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+    <!--footer-->
+    <div class="pie_pagina">
+        <footer>
+            <div class="container__footer">
+                <div class="box__footer">
+                    <div class="logo">
+                        <img src="../img/logo_white_large.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p>DeveloperTravel.com es una nueva agencia de viajes, una iniciativa digital ¿El objetivo? Crear una experiencia única en la compra de servicios turísticos, combinando la tecnología más robusta de los viajes online con la gran experiencia
+                            y respaldo de los grandes jugadores del comercio tradicional.</p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h2>Destinos</h2>
+                    <a href="#">Proyecto 01</a>
+                    <a href="#">Proyecto 02</a>
+                    <a href="#">Proyecto 03</a>
+                    <a href="#">Proyecto 04</a>
+                </div>
+                <div class="box__footer">
+                    <h2>Contacto</h2>
+                    <a href="#">Colegio</a>
+                    <a href="#">Información</a>
+                    <a href="#">Instituto</a>
+                    <a href="#">Contacto</a>
+                </div>
+                <div class="box__footer">
+                    <h2>Redes Sociales</h2>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="https://api.whatsapp.com/send?phone=+51979043472&text=Hola%20Samuel!!%20me%20gusto%20mucho%20el%20dise%C3%B1o%20de%20tu%20pagina" target="_blank"><i class="fab fa-whatsapp-square"></i> WhatsApp</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+            </div>
+            <div class="box__copyright">
+                <hr>
+                <p><b>Todos los derechos reservados © 2021 Samuel Lls</p>
+    </div>
+    <!--footer-->
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+
+</html>

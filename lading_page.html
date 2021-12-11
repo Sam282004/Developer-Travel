@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+
+    <title>Developer Travel</title>
+</head>
+<style>
+    * {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    /*     body {
+        background-image: url(../img/Fondo.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        color: black;
+    } */
+    
+    body {
+        margin: 0;
+    }
+    
+    video {
+        width: 100%;
+        position: fixed;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    nav img {
+        padding-top: 25px;
+        padding-left: 60px;
+        height: 120px;
+        padding-bottom: 25px;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: space-between;
+        display: flex;
+        position: fixed;
+        z-index: 1;
+        background: none;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        color: white !important;
+    }
+    
+    .node {
+        padding-right: 150px;
+        padding-top: 200px;
+        text-align: right;
+        position: relative;
+    }
+    
+    .text {
+        background-image: linear-gradient(to right, hsla(336, 22%, 95%, 0.198), hsla(340, 60%, 98%, 0.609)), url(img/FondoB.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        padding: 25px;
+        text-align: center;
+        display: inline-block;
+        border-radius: .25rem;
+        transition: all 400ms;
+    }
+    
+    .text:hover {
+        transform: translateY(-10px);
+        transition: all 400ms ease;
+    }
+    
+    .text h1 {
+        color: #18191a;
+        font-weight: bold;
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 54px;
+        padding-bottom: 25px;
+    }
+    
+    .pp {
+        text-align: center;
+        font-weight: bold;
+        font-family: 'Comfortaa', cursive;
+        font-size: 24px;
+        padding-bottom: 36px;
+    }
+    
+    .text a {
+        color: #ffffff;
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: .25rem;
+        text-decoration: none;
+        color: white;
+        font-family: 'Cinzel Decorative', cursive;
+        font-size: 23px;
+        font-weight: 600;
+    }
+    
+    .text a:hover {
+        opacity: 0.9;
+    }
+    
+    .text div a {
+        background: linear-gradient(102deg, #000000 40%, #000000 60%);
+        border: 1px solid black;
+    }
+    
+    .move {
+        position: relative;
+    }
+    
+    button {
+        border-radius: 5px;
+        background: transparent;
+        border: 2px solid #4551b5;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        animation: pulse 1s infinite;
+    }
+    
+    @keyframes pulse {
+        0% {
+            transform: scale(.99);
+            box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
+        }
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 120px rgba(256, 256, 256, 0);
+        }
+        100% {
+            transform: scale(.99);
+            box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+        }
+    }
+    
+    .p {
+        font-size: 25px;
+        font-family: 'Fredoka One', cursive;
+        color: #4551b5;
+        padding: 6px 30px;
+        text-align: center;
+        display: inline-block;
+        margin: 4px 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition-duration: 0.2s;
+    }
+    
+    button:hover {
+        transition: 0.3s;
+        background: linear-gradient(120deg, #4551b5 40%, #543df5 60%);
+    }
+    
+    .p:hover {
+        color: white;
+    }
+    
+    .button {
+        animation: pulse 1.5s infinite;
+    }
+</style>
+
+<body>
+    <video src="videos/1875726380.mp4" autoplay loop muted></video>
+
+    <header>
+        <nav class="animate__backInRight">
+            <img src="../img/logo_white_large.png" alt="">
+
+        </nav>
+
+    </header>
+
+    <div class="node">
+        <div class="text">
+            <h1>Empieza tu Destino!</h1>
+            <p class="pp">Te ofrecemos la atención personalizada de <br>profesionales expertos en viajes y turismo <br>y nosotros que puedan brindarte y encontrar<br>las mejores ofertas para vivir experiencias <br>inolvidables junto a Viajes Developer Travel</p>
+
+            <div class="move">
+                <button class="button"><p class="p">Despega !! <i class="fas fa-paper-plane"></i></p></button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
