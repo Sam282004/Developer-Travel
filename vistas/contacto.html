@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto</title>
+    <style>
+        .formulario__mayor {
+            border: 1px solid black;
+            width: 40%;
+            text-align: center;
+            margin: auto;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .formulario__menor {
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        form label,
+        input,
+        textarea {
+            display: flex;
+        }
+        
+        form input,
+        textarea {
+            height: 30px;
+            width: 600px;
+        }
+        
+        .buton__mayor {
+            text-align: right;
+        }
+        
+        form button {
+            margin-top: 30px;
+            padding: 10px;
+            border: 1px solid black;
+            color: white;
+            background: #CF2337;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="formulario__mayor">
+        <h1>CONTACTATE CON NOSOTROS</h1>
+        <div class="formulario__menor">
+
+
+            <form action="/my-handling-form-page" method="post">
+
+
+                <label for="name">Nombres:</label>
+                <input type="text" id="name" name="user_name">
+
+
+                <label for="name">Apellidos:</label>
+                <input type="text" id="name" name="user_name">
+
+
+                <label for="mail">Correo:</label>
+                <input type="email" id="mail" name="user_mail">
+
+
+                <label for="num">Telefono:</label>
+                <input type="text" id="name" name="user_name">
+
+
+                <label for="msg">Mensaje:</label>
+                <textarea id="msg" name="user_message"></textarea>
+
+                <p class="buton__mayor"> <button type="submit">Enviar</button></p>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

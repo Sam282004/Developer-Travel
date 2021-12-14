@@ -1,51 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-
-
-    <title>Developer Travel</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>Landing Page</title>
 </head>
 <style>
     * {
-        max-width: 100%;
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    /*     body {
-        background-image: url(../img/Fondo.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        color: black;
-    } */
     
     body {
-        margin: 0;
+        font-family: 'Raleway', sans-serif;
     }
     
-    video {
-        width: 100%;
+    nav {
         position: fixed;
-        min-width: 100%;
-        min-height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
+        top: 20px;
+        left: 20px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    nav a {
+        color: #fff;
+        text-decoration: none;
     }
     
     nav img {
@@ -55,160 +41,159 @@
         padding-bottom: 25px;
     }
     
-    nav {
-        width: 100%;
-        justify-content: space-between;
-        display: flex;
-        position: fixed;
+    .icono {
+        display: block;
         z-index: 1;
-        background: none;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        color: white !important;
+        animation: moverIzquierda 1s ease-in;
     }
     
-    .node {
-        padding-right: 150px;
-        padding-top: 200px;
-        text-align: right;
-        position: relative;
+    header {
+        background: #CF2337;
+        height: auto;
+        padding: 48px;
+        width: 100%;
     }
     
-    .text {
-        background-image: linear-gradient(to right, hsla(336, 22%, 95%, 0.198), hsla(340, 60%, 98%, 0.609)), url(img/FondoB.jpg);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        padding: 25px;
-        text-align: center;
+    .container {
+        display: flex;
+    }
+    
+    img {
+        height: 650px;
+        object-fit: cover;
+        margin: auto;
+        justify-content: end;
+        animation: arriba 1s ease-in;
+    }
+    
+    .textos {
+        width: 40%;
+        margin: auto;
+        padding: 30px;
+        color: #fff;
+    }
+    
+    .textos h1 {
+        font-size: 60px;
+        font-family: sans-serif;
+        animation: moverDerecha 1s ease-in;
+        margin-bottom: 26px;
+    }
+    
+    .textos h4 {
+        font-size: 20px;
+        line-height: 1.5;
+        animation: moverIzquierda 1s ease-in;
+    }
+    
+    .textos a {
         display: inline-block;
-        border-radius: .25rem;
-        transition: all 400ms;
-    }
-    
-    .text:hover {
-        transform: translateY(-10px);
-        transition: all 400ms ease;
-    }
-    
-    .text h1 {
-        color: #18191a;
+        color: black;
+        font-size: 20px;
         font-weight: bold;
-        font-family: 'Luckiest Guy', cursive;
-        font-size: 54px;
-        padding-bottom: 25px;
-    }
-    
-    .pp {
-        text-align: center;
-        font-weight: bold;
-        font-family: 'Comfortaa', cursive;
-        font-size: 24px;
-        padding-bottom: 36px;
-    }
-    
-    .text a {
-        color: #ffffff;
-        display: inline-block;
-        padding: 1rem 2rem;
-        border-radius: .25rem;
         text-decoration: none;
-        color: white;
-        font-family: 'Cinzel Decorative', cursive;
-        font-size: 23px;
-        font-weight: 600;
+        margin-top: 30px;
+        border: 1px solid #fff;
+        width: 150px;
+        border-radius: 3px;
+        text-align: center;
+        padding: 10px 0;
+        transition: 0.4s;
+        animation: arriba 1s ease-in;
+        background-color: white;
     }
     
-    .text a:hover {
-        opacity: 0.9;
-    }
-    
-    .text div a {
-        background: linear-gradient(102deg, #000000 40%, #000000 60%);
+    .textos a:hover {
+        background-color: white;
+        color: black;
         border: 1px solid black;
+        transition: 0.5s;
     }
     
-    .move {
-        position: relative;
+    .wave {
+        height: 100px;
+        width: 100%;
+        background: #DA4453;
+        background: linear-gradient(90deg, #D31027 0%, #EA384D 100%);
+    }
+    /* .enlaces {
+        position: fixed;
+        display: flex;
+        top: 0;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        right: 0;
+        flex-direction: column;
+        width: 100%;
+        transition: all 1s ease;
+        background: #bc4e9c;
+        background: -webkit-linear-gradient(to right, #f80759, #bc4e9c);
+        background: linear-gradient(to right, #f80759, #bc4e9c);
+    } */
+    
+    .uno {
+        -webkit-clip-path: circle(0% at 0 0);
+        clip-path: circle(0% at 0 0);
     }
     
-    button {
-        border-radius: 5px;
-        background: transparent;
-        border: 2px solid #4551b5;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        animation: pulse 1s infinite;
+    .dos {
+        -webkit-clip-path: circle(150% at 0 0);
+        clip-path: circle(150% at 0 0);
     }
     
-    @keyframes pulse {
+    @keyframes moverIzquierda {
         0% {
-            transform: scale(.99);
-            box-shadow: 0 0 0 0 rgba(256, 256, 256, .1);
-        }
-        70% {
-            transform: scale(1);
-            box-shadow: 0 0 0 120px rgba(256, 256, 256, 0);
+            opacity: 0;
+            transform: translateX(-100px);
         }
         100% {
-            transform: scale(.99);
-            box-shadow: 0 0 0 0 rgba(256, 256, 256, 0);
+            opacity: 1;
+            transform: translate(0);
         }
     }
     
-    .p {
-        font-size: 25px;
-        font-family: 'Fredoka One', cursive;
-        color: #4551b5;
-        padding: 6px 30px;
-        text-align: center;
-        display: inline-block;
-        margin: 4px 2px;
-        text-decoration: none;
-        text-transform: uppercase;
-        transition-duration: 0.2s;
+    @keyframes moverDerecha {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
     }
     
-    button:hover {
-        transition: 0.3s;
-        background: linear-gradient(120deg, #4551b5 40%, #543df5 60%);
-    }
-    
-    .p:hover {
-        color: white;
-    }
-    
-    .button {
-        animation: pulse 1.5s infinite;
+    @keyframes arriba {
+        0% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
     }
 </style>
 
 <body>
-    <video src="videos/1875726380.mp4" autoplay loop muted></video>
-
     <header>
-        <nav class="animate__backInRight">
-            <img src="../img/logo_white_large.png" alt="">
-
-        </nav>
-
-    </header>
-
-    <div class="node">
-        <div class="text">
-            <h1>Empieza tu Destino!</h1>
-            <p class="pp">Te ofrecemos la atención personalizada de <br>profesionales expertos en viajes y turismo <br>y nosotros que puedan brindarte y encontrar<br>las mejores ofertas para vivir experiencias <br>inolvidables junto a Viajes Developer Travel</p>
-
-            <div class="move">
-                <button class="button"><p class="p">Despega !! <i class="fas fa-paper-plane"></i></p></button>
+        <div class="container">
+            <nav>
+                <img src="img/logo_white_large.png" alt="">
+            </nav>
+            <div class="textos">
+                <h1>Empieza tu Destino!</h1>
+                <h4>Te ofrecemos la atención personalizada de profesionales expertos en viajes y turismo y nosotros que puedan brindarte y encontrar las mejores ofertas para vivir experiencias inolvidables junto a Viajes Developer Travel</h4>
+                <a href="vistas/index.html">Despega</a>
             </div>
+            <img src="img.svg" alt="">
         </div>
+    </header>
+    <div class="wave">
+        <div style="height: 100px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
     </div>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>
