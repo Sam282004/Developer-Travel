@@ -8,18 +8,29 @@
 
     <title>Contacto</title>
     <style>
+        * {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            font-family: sans-serif;
+        }
+        
         .formulario__mayor {
-            border: 1px solid black;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             width: 40%;
             text-align: center;
             margin: auto;
-            margin-top: 30px;
-            padding: 15px;
+            margin-top: 0px;
+            padding: 50px;
             background-color: rgb(255, 255, 255);
         }
         
         .formulario__menor {
-            padding: 15px;
+            padding: 10px;
             display: flex;
             justify-content: center;
         }
@@ -32,7 +43,8 @@
         
         form input,
         textarea {
-            height: 30px;
+            font-size: 20px;
+            height: 35px;
             width: 600px;
         }
         
@@ -42,48 +54,293 @@
         
         form button {
             margin-top: 30px;
-            padding: 10px;
-            border: 1px solid black;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: sans-serif;
+            border: none;
             color: white;
             background: #CF2337;
             cursor: pointer;
         }
+        
+        form button:hover {
+            opacity: 0.9;
+        }
+        
+        nav img {
+            padding-top: 25px;
+            padding-left: 60px;
+            height: 120px;
+            padding-bottom: 25px;
+        }
+        
+        nav form {
+            padding-top: 30px;
+            display: flex;
+        }
+        
+        nav form input {
+            box-shadow: rgba(221, 221, 230, 0.63) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            margin-right: 10px;
+            border: 2px solid black;
+            padding: 10px;
+            width: 500px;
+            height: 35px;
+            background-color: white;
+        }
+        
+        nav form button {
+            border: 2px solid black;
+            background-color: white;
+            height: 35px;
+            width: 35px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        nav {
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+            position: fixed;
+            z-index: 1;
+            background-color: #CF2337;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            /*  background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/FondoB.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;*/
+            color: white !important;
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            color: white;
+            list-style: none;
+            padding: 45px 35px 35px 0px;
+        }
+        
+        nav ul li:hover {
+            transform: translateY(-2px);
+        }
+        
+        nav ul li a {
+            font-weight: bold;
+            padding: 15px;
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+        
+        .pie_pagina {
+            padding-top: 100px;
+        }
+        
+        footer {
+            color: white;
+            margin-top: 0px;
+            width: 100%;
+            padding: 5px 0px;
+            font-family: sans-serif;
+            background-color: #CF2337;
+            /* background-image: linear-gradient(to right, hsla(339, 25%, 89%, 0.198), hsla(339, 25%, 89%, 0.198)), url(img/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
+        }
+        
+        .container__footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1300px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        
+        .box__footer {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+        
+        .box__footer .logo img {
+            width: 180px;
+        }
+        
+        .box__footer .terms {
+            font-family: sans-serif;
+            max-width: 550px;
+            margin-top: 20px;
+            font-weight: 400;
+            text-align: justify;
+            color: white;
+            font-size: 18px;
+        }
+        
+        .box__footer h2 {
+            font-family: sans-serif;
+            border-bottom: white 1px solid;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .box__footer a {
+            font-family: sans-serif;
+            text-decoration: none;
+            margin-top: 10px;
+            color: white;
+            font-weight: 400;
+        }
+        
+        .box__footer a:hover {
+            font-family: 'Open Sans', sans-serif;
+            opacity: 0.8;
+        }
+        
+        .box__footer a .fab {
+            font-size: 30px;
+        }
+        
+        .box__copyright {
+            font-family: sans-serif;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+            padding: 0px 40px;
+        }
+        
+        .box__copyright p {
+            font-family: sans-serif;
+            margin-top: 10px;
+            color: white;
+        }
+        
+        .box__copyright hr {
+            border-color: white !important;
+            height: 1px;
+            background-color: white !important;
+            width: 100%;
+        }
+        /*Contacto*/
+        
+        .formulario__menor form label {
+            font-size: 24px;
+            font-family: sans-serif;
+            padding: 15px;
+            padding-left: 0px !important;
+        }
+        /*Contacto*/
     </style>
 </head>
 
 <body>
-    <div class="formulario__mayor">
-        <h1>CONTACTATE CON NOSOTROS</h1>
-        <div class="formulario__menor">
+    <header>
+        <nav class="animate__backInRight">
+            <a href="../vistas/index.html"> <img src="../img/logo_white_large.png" alt=""></a>
 
 
-            <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li><a href="index.html"> INICIO</a></li>
+                <li><a href="">DISTINOS</a></li>
+                <li><a href="">RESERVA</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div style="padding-top: 200px;">
+        <div class="formulario__mayor">
 
 
-                <label for="name">Nombres:</label>
-                <input type="text" id="name" name="user_name">
+            <h1>CONTACTATE CON NOSOTROS</h1>
+            <div class="formulario__menor">
 
 
-                <label for="name">Apellidos:</label>
-                <input type="text" id="name" name="user_name">
+                <form action="/my-handling-form-page" method="post">
 
 
-                <label for="mail">Correo:</label>
-                <input type="email" id="mail" name="user_mail">
+                    <label for="name">Nombres:</label>
+                    <input type="text" id="name" name="user_name">
 
 
-                <label for="num">Telefono:</label>
-                <input type="text" id="name" name="user_name">
+                    <label for="name">Apellidos:</label>
+                    <input type="text" id="name" name="user_name">
 
 
-                <label for="msg">Mensaje:</label>
-                <textarea id="msg" name="user_message"></textarea>
+                    <label for="mail">Correo:</label>
+                    <input type="email" id="mail" name="user_mail">
 
-                <p class="buton__mayor"> <button type="submit">Enviar</button></p>
-            </form>
 
+                    <label for="num">Telefono:</label>
+                    <input type="text" id="name" name="user_name">
+
+
+                    <label for="msg">Mensaje:</label>
+                    <textarea id="msg" name="user_message"></textarea>
+
+                    <p class="buton__mayor"> <button type="submit">Enviar</button></p>
+                </form>
+
+            </div>
         </div>
     </div>
+    <div class="pie_pagina">
+        <footer>
+            <div class="container__footer">
+                <div class="box__footer">
+                    <div class="logo">
+                        <img src="../img/logo_white_large.png" alt="">
+                    </div>
+                    <div class="terms">
+                        <p>DeveloperTravel.com es una nueva agencia de viajes, una iniciativa digital ¿El objetivo? Crear una experiencia única en la compra de servicios turísticos, combinando la tecnología más robusta de los viajes online con la gran experiencia
+                            y respaldo de los grandes jugadores del comercio tradicional.</p>
+                    </div>
+                </div>
+                <div class="box__footer">
+                    <h2>Destinos</h2>
+                    <a href="#">Proyecto 01</a>
+                    <a href="#">Proyecto 02</a>
+                    <a href="#">Proyecto 03</a>
+                    <a href="#">Proyecto 04</a>
+                </div>
+                <div class="box__footer">
+                    <h2>Contacto</h2>
+                    <a href="#">Colegio</a>
+                    <a href="#">Información</a>
+                    <a href="#">Instituto</a>
+                    <a href="#">Contacto</a>
+                </div>
+                <div class="box__footer">
+                    <h2>Redes Sociales</h2>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                    <a href="https://api.whatsapp.com/send?phone=+51979043472&text=Hola%20Samuel!!%20me%20gusto%20mucho%20el%20dise%C3%B1o%20de%20tu%20pagina" target="_blank"><i class="fab fa-whatsapp-square"></i> WhatsApp</a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </div>
+            </div>
+            <div class="box__copyright">
+                <hr>
+                <p><b>Todos los derechos reservados © 2021 Samuel Lls</p>
+    </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
