@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--CSS-->
-    <link rel="stylesheet" href="style.css">
-    <!--CSS-->
+    <!--libreria-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!--Fin-->
     <!--ANIMATED.CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--ANIMATED.CSS-->
@@ -342,130 +343,6 @@
             border-bottom: 3px 1px solid white;
             padding-bottom: 20px;
         }
-        /*Forumalario de viaje */
-        
-        .padre__form {
-            border-top: gray 1px solid;
-            background-color: rgb(248, 226, 226);
-            text-align: center;
-            border-bottom: 1px solid gray;
-            padding-top: 90px;
-            padding-bottom: 90px;
-            width: 100%;
-            max-width: 100%;
-        }
-        
-        form h1 {
-            font-family: sans-serif;
-            font-size: 40px;
-            text-align: left;
-            padding-left: 15px;
-        }
-        
-        .formulario {
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            display: inline-flex;
-            color: black;
-            padding: 25px;
-            background-color: white;
-        }
-        
-        .form__reserva {
-            display: flex;
-            width: 210px;
-            margin: 10px;
-            background-color: white;
-            border: 1px solid rgba(0, 0, 0, 0.329);
-        }
-        
-        .dates {
-            padding: 5px;
-            display: flex;
-        }
-        
-        .dates i {
-            color: #CF2337 !important;
-            margin: auto;
-        }
-        
-        .dates input {
-            background: none;
-            text-align: center;
-            border: none;
-            height: 40px;
-            color: black;
-            margin: auto;
-            font-family: sans-serif;
-        }
-        
-        .dates input:focus {
-            border: none;
-            background: none;
-            outline: none;
-        }
-        
-        .dates i {
-            color: #CF2337 !important;
-            padding: 5px;
-            margin-bottom: 15px;
-        }
-        
-        .reserva__from {
-            display: flex;
-            width: 210px;
-            margin: 10px;
-            border: 1px solid rgba(0, 0, 0, 0.329);
-            background-color: white;
-        }
-        
-        .reserva__date {
-            align-items: center;
-            text-align: center;
-            justify-content: center;
-            display: flex;
-        }
-        
-        .reserva__date select {
-            border: white 1px solid !important;
-            text-align: center;
-            height: 40px;
-            width: 170px;
-            border: none;
-            outline: none;
-            margin: auto;
-        }
-        
-        .reserva__date i {
-            padding: 5px;
-            color: #CF2337 !important;
-            margin: auto;
-        }
-        
-        .option {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-        }
-        
-        .biton {
-            background-color: #CF2337;
-            padding: 15px;
-            border-radius: 5px;
-            color: white !important;
-            border: 1px solid white;
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .biton:hover {
-            opacity: 0.8;
-        }
-        
-        .option a {
-            text-decoration: none;
-            color: red;
-            font-weight: 700;
-            font-family: sans-serif;
-        }
         
         .pie_pagina {
             padding-top: 100px;
@@ -560,6 +437,128 @@
             width: 100%;
         }
         /*footer*/
+        /*Forumalario de viaje */
+        
+        .contenedor {
+            display: flex;
+            justify-content: center;
+            padding: 25px;
+            background-color: #CF2337;
+        }
+        
+        form {
+            font-size: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            padding: 25px;
+            color: black;
+            background-color: rgb(255, 255, 255);
+            display: inline-block;
+        }
+        
+        form ul li {
+            list-style: none;
+        }
+        
+        .ul01 {
+            padding: 5px;
+            padding-bottom: 0px !important;
+            display: flex;
+        }
+        
+        .ul01 li {
+            border: 1px solid rgba(54, 54, 54, 0.514);
+            margin: 10px;
+        }
+        
+        .ul01 label {
+            color: white;
+            background-color: #CF2337;
+        }
+        
+        .ul01 input,
+        label {
+            padding: 5px;
+            border: none;
+        }
+        
+        .ul01 input {
+            margin: 5px;
+        }
+        
+        .ul01 label {
+            display: flex;
+        }
+        
+        .ul02 {
+            padding: 5px;
+            padding-bottom: 5px !important;
+            padding-top: 0px !important;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .ul02 li {
+            width: 250px;
+            border: 1px solid rgba(54, 54, 54, 0.514);
+            margin: 10px;
+        }
+        
+        .ul02 label {
+            color: white;
+            display: block;
+            background-color: #CF2337;
+        }
+        
+        .ul02 select {
+            margin-bottom: 10px !important;
+            display: flex;
+            width: 100px;
+            margin: auto;
+            border: none;
+        }
+        
+        .ul03 {
+            border: 1px solid rgba(54, 54, 54, 0.514);
+            margin: 15px;
+        }
+        
+        .seccion_ida {
+            color: white;
+            font-family: sans-serif;
+            background-color: #CF2337;
+        }
+        
+        .ul03 input {
+            margin: 10px;
+            border: 1px solid rgba(54, 54, 54, 0.514);
+            padding: 5px;
+        }
+        
+        #formulario button {
+            display: inline-block;
+            border: none;
+            color: white;
+            padding: 10px;
+            background-color: #CF2337;
+            text-align: center;
+            font-family: sans-serif;
+            margin-left: 20px;
+            font-size: 19px;
+        }
+        
+        .buton__sumit {
+            background-color: #CF2337;
+            cursor: pointer;
+            margin-left: 15px;
+            margin-right: 15px;
+            display: block;
+            text-align: center;
+        }
+        
+        .buton__sumit:hover {
+            opacity: 0.9;
+        }
+        /*Forumalario de viaje */
     </style>
 
 </head>
@@ -607,245 +606,270 @@
 
     </div>
 
-    <div class="padre__form">
-        <div class="formulario">
+    <!--Formulario de Reserva-->
+    <div class="contenedor">
+        <form id="formulario" method="post" action="#">
+            <ul class="ul01">
+                <li>
+                    <label for="nombre">Nombre Completo: <i style="font-size: 30px;margin-left: 20px;" class="fas fa-user"></i></label>
+                    <input type="text" id="nombre " placeholder="Ej. Luis" required>
+                </li>
+                <li>
+                    <label for="apellido ">Apellido Completo:<i style="font-size: 30px;margin-left: 20px;" class="fas fa-user"></i></label>
+                    <input type="text" id="apellido" placeholder="Ej. Flores" required>
+                </li>
 
-            <form action="">
-                <h1>Reserva tu Viaje</h1>
-                <div class="dates">
+                <li>
+                    <label for="dni">Documento:<i class="far fa-id-card" style="font-size: 30px; margin: auto;"></i></label>
+                    <input type="text" id="dni" placeholder="Ej. 123456789" required pattern="[0-9]{8}" title="Debe poner 8 números y una letra">
+                </li>
 
-                    <div class="form__reserva">
-                        <i class="fas fa-map-marker-alt fa-2x tm-form-element-icon"></i>
-                        <input name="city" type="text" class="form-control" id="" placeholder="Elige tu Destino">
-                    </div>
-                    <div class="form__reserva">
+            </ul>
 
-                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+            <ul class="ul02">
 
-                        <input name="check-in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
-                    </div>
-                    <div class="form__reserva">
-                        <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
-                        <input name="check-out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
-                    </div>
+                <li>
+                    <label for="correo">Correo Electronico: <i class="fas fa-envelope" style="font-size: 30px;margin-left: 20px;"></i> </label>
+                    <input style="border: none; margin: 5px;" type="email" id="correo" placeholder="Ej. 123@hotmail.com" required>
+                </li>
+                <li>
+                    <label for="lugarorigen">Lugar de Origen: <i class="fas fa-map-marker-alt" style="font-size: 30px;margin-left: 20px;"></i></label>
+                    <select id="lugarorigen">
+                        <option value="0"></option>
+                       <option value="1">Lima</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="lugardestino">Lugar de Destino: <i class="fas fa-plane-departure" style="font-size: 30px;margin-left: 20px;"></i></label>
+                    <select id="lugardestino">
+                        <option value="0"></option>
+                      <option value="1">Chiclayo</option>
+                      <option value="2">Tarapoto</option>
+                      <option value="3">Pucallpa</option>
+                      <option value="4">Arequipa</option>
+                      <option value="5">Cusco</option>
+                      <option value="6">Piura</option>
+
+                    </select>
+                </li>
+            </ul>
+            <ul class="ul03">
+                <li class="seccion_ida">
+                    <label for="tipo">Seleccione el Tipo:  </label>
+                    <input type="radio" id="tipo1" name="tipo"> Ida/Vuelta
+                    <input type="radio" id="tipo2" name="tipo">Solo ida
+                </li>
+                <div style="display: flex; justify-content: space-between;">
+                    <li>
+                        <label for="fechaida">Ida:</label>
+                        <input type="date" id="fechaida"></li>
+
+                    <li id="inusualfail">
+                        <label for="fecharegreso">Regreso:</label>
+                        <input type="date" id="fecharegreso">
+                    </li>
                 </div>
-                <div class="reserva__date">
-                    <div class="reserva__from">
-                        <select name="adult" class="form-control tm-select" id="adult">
-                                                <option value="">Adulto</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>
-                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
-                    </div>
-                    <div class="reserva__from">
-                        <select name="children" id="children">
-                                                <option value="">Niño</option>
-                                                <option value="0">0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>
-                        <i class="fa fa-2x fa-user tm-form-element-icon"></i>
-                    </div>
-                    <div class="reserva__from">
-                        <select name="room" class="form-control tm-select" id="room">
-                                                <option value="">Habitación</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>
-                        <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
-                    </div>
-
-                </div>
-                <div class="option">
-
-                    <a href="" class="biton">Reservar</a>
-                    <a href="#" class="">¿Necesitas Ayuda?</a>
+            </ul>
 
 
 
-                </div>
+            <li style="list-style: none;" class="buton__sumit">
+                <button type="submit">Reservar Viaje</button>
+            </li>
 
-            </form>
 
-        </div>
+            <br>
+            <button onclick="mostrar()">Mostrar :v </button>
+
+        </form>
     </div>
+    <!--Formulario de Reserva-->
 
-    <div class="card__mayor">
-        <div class="card" id="tarjeta_1">
-            <img src="https://noticias.iglesia.org.pe/wp-content/uploads/2021/02/chiclayo2.jpg" alt="">
-            <div class="contenido compu">
-                <div class="zx">
+
+    <div class="card__mayor ">
+        <div class="card " id="tarjeta_1 ">
+            <img src="https://noticias.iglesia.org.pe/wp-content/uploads/2021/02/chiclayo2.jpg " alt=" ">
+            <div class="contenido compu ">
+                <div class="zx ">
                     <h4>Chiclayo</h4>
                 </div>
-                <p style="color: black !important;"> Desde</p>
-                <p> USD: <span style="font-size:  40px !important; font-weight: 700 !important; ">36.00</span></p>
-                <p> ó S/ <span style="font-size:  40px !important; font-weight: 700 !important; ">144.00</span></p>
-                <p style="color: black !important ;"> Por tramo</p>
+                <p style="color: black !important; "> Desde</p>
+                <p> USD: <span style="font-size: 40px !important; font-weight: 700 !important; ">36.00</span></p>
+                <p> ó S/ <span style="font-size: 40px !important; font-weight: 700 !important; ">144.00</span></p>
+                <p style="color: black !important ; "> Por tramo</p>
             </div>
             <hr>
-            <div class="aaa1">
-                <a href="../vistas/chiclayo.html"><i class="fas fa-arrow-alt-circle-right"></i></a>
+            <div class="aaa1 ">
+                <a href="../vistas/chiclayo.html "><i class="fas fa-arrow-alt-circle-right "></i></a>
             </div>
         </div>
-        <div class="card" id="tarjeta_1">
-            <img src="../img/tarapoto2.jpg" alt="">
-            <div class="contenido compu">
-                <div class="zx">
+        <div class="card " id="tarjeta_1 ">
+            <img src="../img/tarapoto2.jpg " alt=" ">
+            <div class="contenido compu ">
+                <div class="zx ">
                     <h4>Tarapoto</h4>
 
                 </div>
-                <p style="color: black !important;"> Desde</p>
-                <p> USD: <span style="font-size:  40px !important; font-weight: 700 !important; "> 48.42</span></p>
-                <p> ó S/ <span style="font-size:  40px !important; font-weight: 700 !important; ">204.01</span></p>
-                <p style="color: black !important ;"> Por tramo</p>
+                <p style="color: black !important; "> Desde</p>
+                <p> USD: <span style="font-size: 40px !important; font-weight: 700 !important; "> 48.42</span></p>
+                <p> ó S/ <span style="font-size: 40px !important; font-weight: 700 !important; ">204.01</span></p>
+                <p style="color: black !important ; "> Por tramo</p>
             </div>
             <hr>
-            <div class="aaa1">
-                <a href="../vistas/tarapoto.html"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            <div class="aaa1 ">
+                <a href="../vistas/tarapoto.html "> <i class="fas fa-arrow-alt-circle-right "></i></a>
             </div>
         </div>
-        <div class="card" id="tarjeta_1">
-            <img src="../img/pucallpa1.jpg" alt="">
-            <div class="contenido compu">
-                <div class="zx">
+        <div class="card " id="tarjeta_1 ">
+            <img src="../img/pucallpa1.jpg " alt=" ">
+            <div class="contenido compu ">
+                <div class="zx ">
                     <h4>Pucallpa</h4>
 
                 </div>
-                <p style="color: black !important;"> Desde</p>
-                <p> USD: <span style="font-size:  40px !important; font-weight: 700 !important; "> 36.00</span></p>
-                <p> ó S/ <span style="font-size:  40px !important; font-weight: 700 !important; ">144.00</span></p>
-                <p style="color: black !important ;"> Por tramo</p>
+                <p style="color: black !important; "> Desde</p>
+                <p> USD: <span style="font-size: 40px !important; font-weight: 700 !important; "> 36.00</span></p>
+                <p> ó S/ <span style="font-size: 40px !important; font-weight: 700 !important; ">144.00</span></p>
+                <p style="color: black !important ; "> Por tramo</p>
             </div>
             <hr>
-            <div class="aaa1">
-                <a href="../vistas/pucallpa.html"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            <div class="aaa1 ">
+                <a href="../vistas/pucallpa.html "> <i class="fas fa-arrow-alt-circle-right "></i></a>
             </div>
         </div>
 
 
     </div>
-    <div class="card__mayor">
-        <div class="card" id="tarjeta_1">
-            <img src="../img/arequipa2.jpg" alt="">
-            <div class="contenido compu">
-                <div class="zx">
+    <div class="card__mayor ">
+        <div class="card " id="tarjeta_1 ">
+            <img src="../img/arequipa2.jpg " alt=" ">
+            <div class="contenido compu ">
+                <div class="zx ">
                     <h4>Arequipa</h4>
 
                 </div>
-                <p style="color: black !important;"> Desde</p>
-                <p> USD: <span style="font-size:  40px !important; font-weight: 700 !important; "> 54.01</span></p>
-                <p> ó S/ <span style="font-size:  40px !important; font-weight: 700 !important; ">220.01</span></p>
-                <p style="color: black !important ;"> Por tramo</p>
+                <p style="color: black !important; "> Desde</p>
+                <p> USD: <span style="font-size: 40px !important; font-weight: 700 !important; "> 54.01</span></p>
+                <p> ó S/ <span style="font-size: 40px !important; font-weight: 700 !important; ">220.01</span></p>
+                <p style="color: black !important ; "> Por tramo</p>
             </div>
             <hr>
-            <div class="aaa1">
-                <a href="/vistas/arequipa.html"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            <div class="aaa1 ">
+                <a href="/vistas/arequipa.html "> <i class="fas fa-arrow-alt-circle-right "></i></a>
             </div>
         </div>
-        <div class="card" id="tarjeta_1">
-            <img src="../img/cusco2.jpg" alt="">
-            <div class="contenido compu">
-                <div class="zx">
+        <div class="card " id="tarjeta_1 ">
+            <img src="../img/cusco2.jpg " alt=" ">
+            <div class="contenido compu ">
+                <div class="zx ">
                     <h4>Cusco</h4>
 
                 </div>
-                <p style="color: black !important;"> Desde</p>
-                <p> USD: <span style="font-size:  40px !important; font-weight: 700 !important; "> 31.59</span></p>
-                <p> ó S/ <span style="font-size:  40px !important; font-weight: 700 !important; ">129.04</span></p>
-                <p style="color: black !important ;"> Por tramo</p>
+                <p style="color: black !important; "> Desde</p>
+                <p> USD: <span style="font-size: 40px !important; font-weight: 700 !important; "> 31.59</span></p>
+                <p> ó S/ <span style="font-size: 40px !important; font-weight: 700 !important; ">129.04</span></p>
+                <p style="color: black !important ; "> Por tramo</p>
             </div>
             <hr>
-            <div class="aaa1">
-                <a href="/vistas/cusco.html"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            <div class="aaa1 ">
+                <a href="/vistas/cusco.html "> <i class="fas fa-arrow-alt-circle-right "></i></a>
             </div>
         </div>
-        <div class="card" id="tarjeta_1">
-            <img src="../img/piura.jpg" alt="">
-            <div class="contenido compu">
-                <div class="zx">
+        <div class="card " id="tarjeta_1 ">
+            <img src="../img/piura.jpg " alt=" ">
+            <div class="contenido compu ">
+                <div class="zx ">
                     <h4>Piura</h4>
 
                 </div>
-                <p style="color: black !important;"> Desde</p>
-                <p> USD: <span style="font-size:  40px !important; font-weight: 700 !important; "> 42.01</span></p>
-                <p> ó S/ <span style="font-size:  40px !important; font-weight: 700 !important; ">168.01</span></p>
-                <p style="color: black !important ;"> Por tramo</p>
+                <p style="color: black !important; "> Desde</p>
+                <p> USD: <span style="font-size: 40px !important; font-weight: 700 !important; "> 42.01</span></p>
+                <p> ó S/ <span style="font-size: 40px !important; font-weight: 700 !important; ">168.01</span></p>
+                <p style="color: black !important ; "> Por tramo</p>
             </div>
             <hr>
-            <div class="aaa1">
-                <a href="/vistas/piura.html"> <i class="fas fa-arrow-alt-circle-right"></i></a>
+            <div class="aaa1 ">
+                <a href="/vistas/piura.html "> <i class="fas fa-arrow-alt-circle-right "></i></a>
             </div>
         </div>
 
 
     </div>
-    <div class="pie_pagina">
+    <div class="pie_pagina ">
         <footer>
-            <div class="container__footer">
-                <div class="box__footer">
-                    <div class="logo">
-                        <img src="../img/logo_white_large.png" alt="">
+            <div class="container__footer ">
+                <div class="box__footer ">
+                    <div class="logo ">
+                        <img src="../img/logo_white_large.png " alt=" ">
                     </div>
-                    <div class="terms">
+                    <div class="terms ">
                         <p>DeveloperTravel.com es una nueva agencia de viajes, una iniciativa digital ¿El objetivo? Crear una experiencia única en la compra de servicios turísticos, combinando la tecnología más robusta de los viajes online con la gran experiencia
                             y respaldo de los grandes jugadores del comercio tradicional.</p>
                     </div>
                 </div>
-                <div class="box__footer">
+                <div class="box__footer ">
                     <h2>Destinos</h2>
-                    <a href="#">Proyecto 01</a>
-                    <a href="#">Proyecto 02</a>
-                    <a href="#">Proyecto 03</a>
-                    <a href="#">Proyecto 04</a>
+                    <a href="# ">Proyecto 01</a>
+                    <a href="# ">Proyecto 02</a>
+                    <a href="# ">Proyecto 03</a>
+                    <a href="# ">Proyecto 04</a>
                 </div>
-                <div class="box__footer">
+                <div class="box__footer ">
                     <h2>Contacto</h2>
-                    <a href="#">Colegio</a>
-                    <a href="#">Información</a>
-                    <a href="#">Instituto</a>
-                    <a href="#">Contacto</a>
+                    <a href="# ">Colegio</a>
+                    <a href="# ">Información</a>
+                    <a href="# ">Instituto</a>
+                    <a href="# ">Contacto</a>
                 </div>
-                <div class="box__footer">
+                <div class="box__footer ">
                     <h2>Redes Sociales</h2>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
-                    <a href="https://api.whatsapp.com/send?phone=+51979043472&text=Hola%20Samuel!!%20me%20gusto%20mucho%20el%20dise%C3%B1o%20de%20tu%20pagina" target="_blank"><i class="fab fa-whatsapp-square"></i> WhatsApp</a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                    <a href="https://www.facebook.com/ " target="_blank "><i class="fab fa-facebook-square "></i> Facebook</a>
+                    <a href="https://api.whatsapp.com/send?phone=+51979043472&text=Hola%20Samuel!!%20me%20gusto%20mucho%20el%20dise%C3%B1o%20de%20tu%20pagina " target="_blank "><i class="fab fa-whatsapp-square "></i> WhatsApp</a>
+                    <a href="https://www.instagram.com/ " target="_blank "><i class="fab fa-instagram-square "></i> Instagram</a>
                 </div>
             </div>
-            <div class="box__copyright">
+            <div class="box__copyright ">
                 <hr>
                 <p><b>Todos los derechos reservados © 2021 Samuel Lls</p>
     </div>
 </footer>
+<script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+    
+    var formulario = document.getElementById('formulario');
+formulario.addEventListener('submit', function(event) {
+    swal.fire({
+        title: "Are you sure?",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+imageUrl: `img/ica.jpg`,
+imageHeight: 412,  
+});
+    
+    event.preventDefault();
+}); 
+var paisorigen = document.getElementById('lugarorigen');
+var paisdestino = document.getElementById('lugardestino');
+var mensaje = document.getElementById('mensaje');
+
+
+
+var fail = document.getElementById('inusualfail');
+
+var tipo2 = document.getElementById('tipo2');
+tipo2.addEventListener('click', function() {
+    fail.style.display = "none";
+})
+var tipo1 = document.getElementById('tipo1');
+var fechaRegreso = document.getElementById('fecharegreso')
+tipo1.addEventListener('click', function() {
+    fail.style.display = 'block';
+    fechaRegreso.required = true;
+})
+</script>
+    
 </body>
 
 </html>
