@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--libreria-->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
-
+    <!--     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+ -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--Fin-->
     <!--ANIMATED.CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -607,7 +607,7 @@
 
     <!--Formulario de Reserva-->
     <div class="contenedor">
-        <form id="formulario" method="post" action="#">
+        <form id="formulario">
             <ul class="ul01">
                 <li>
                     <label id="btnXD" for="nombre">Nombre Completo: <i style="font-size: 30px;margin-left: 20px;" class="fas fa-user"></i></label>
@@ -670,10 +670,7 @@
                 </div>
             </ul>
 
-            <button id="btnXD" onclick="mostrarAlert()" type="submit">Reservar Viaje</button>
-
-
-
+            <button id="btnXD" onclick="mostrarAlert()">Reservar Viaje</button>
 
         </form>
     </div>
@@ -710,11 +707,11 @@
                 <p style="color: black !important ; "> Por tramo</p>
             </div>
             <hr>
-            <div class="aaa1 ">
-                <a href="../vistas/tarapoto.html "> <i class="fas fa-arrow-alt-circle-right "></i></a>
+            <div class="aaa1">
+                <a href="../vistas/tarapoto.html"> <i class="fas fa-arrow-alt-circle-right "></i></a>
             </div>
         </div>
-        <div class="card " id="tarjeta_1 ">
+        <div class="card " id="tarjeta_1">
             <img src="../img/pucallpa1.jpg " alt=" ">
             <div class="contenido compu ">
                 <div class="zx ">
@@ -820,17 +817,35 @@
                 <p><b>Todos los derechos reservados © 2021 DeveloperTravel</p>
     </div>
 </footer>
- <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
- <script src="../Bootstrap/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 <script>
 
-var vNombre = "";
+/* var vNombre = "";
 var vApellido = "";
 var vDni = 0;
-var vCorreo = "";
+var vCorreo = ""; */ 
 
-function mostrarAlert() {
-    var ValidaInput = true
+function mostrarAlert() { 
+   if($("#nombre").text() == ""){
+        alert("El campo Nombre no puede estar vacío");
+        $("#nombre").focus();       
+        return false;
+    }
+    if($("#apellido").text() == ""){
+        alert("El campo Apellidos no puede estar vacío");
+        $("#apellido").focus();
+        return false;
+    } 
+    if($("#apellido").text() == ""){
+        alert("El campo Apellidos no puede estar vacío");
+        $("#apellido").focus();
+        return false;
+    } 
+    
+     
+
+ /*    var ValidaInput = true
     
     vNombre = document.getElementById('nombre').value;
     vApellido = document.getElementById('apellido').value;
@@ -862,11 +877,7 @@ if (vCorreo.length === 0) {
         document.getElementById("MsjTelefono").innerHTML = "Debe ingresar un Telefono";
         validaInput = false;
         document.getElementById("btnEnviar").disabled = true;
-    } else {
-        document.getElementById("MsjTelefono").innerHTML = "";
-        document.getElementById("MsjResultado").innerHTML = "";
-    }
-
+    } 
     if (validaInput) {
         //alert("Hola " + vNombre + ", Te estaremos respodiendo a este correo  " + vEmail + " o espera nuestra llamada al nº  " + vTelefono);
 
@@ -875,20 +886,19 @@ if (vCorreo.length === 0) {
         document.getElementById("MsjEmail").innerHTML = "";
         document.getElementById("MsjTelefono").innerHTML = "";
         document.getElementById("MsjResultado").innerHTML = vNombre + ", Te estaremos respondiendo al siguiente correo  " + vCorreo + " ,o le llamaremos al siguiente numero " + vDni;
-        document.getElementById("btnEnviar").disabled = false;
 
     }
 
-} 
+}  */
 
 
-var paisorigen = document.getElementById('lugarorigen');
+/* var paisorigen = document.getElementById('lugarorigen');
 var paisdestino = document.getElementById('lugardestino');
 var mensaje = document.getElementById('mensaje');
 
 
 
-var fail = document.getElementById('inusualfail');
+ var fail = document.getElementById('inusualfail');
 
 var tipo2 = document.getElementById('tipo2');
 tipo2.addEventListener('click', function() {
@@ -900,6 +910,8 @@ tipo1.addEventListener('click', function() {
     fail.style.display = 'block';
     fechaRegreso.required = true;
 })
+
+} */
 </script>
     
 </body>
