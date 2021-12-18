@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--libreria-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css">
 
     <!--Fin-->
     <!--ANIMATED.CSS-->
@@ -440,15 +441,17 @@
         /*Forumalario de viaje */
         
         .contenedor {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
             display: flex;
             justify-content: center;
-            padding: 25px;
-            background-color: #CF2337;
+            padding: 35px;
+            background-color: #ffffff;
         }
         
         form {
             font-size: 20px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             padding: 25px;
             color: black;
             background-color: rgb(255, 255, 255);
@@ -459,10 +462,16 @@
             list-style: none;
         }
         
+        form ul li input:focus {
+            outline: none;
+            background-color: #dfe;
+            border: 0;
+        }
+        
         .ul01 {
-            padding: 5px;
             padding-bottom: 0px !important;
             display: flex;
+            justify-content: center;
         }
         
         .ul01 li {
@@ -490,8 +499,6 @@
         }
         
         .ul02 {
-            padding: 5px;
-            padding-bottom: 5px !important;
             padding-top: 0px !important;
             display: flex;
             justify-content: center;
@@ -542,17 +549,9 @@
             background-color: #CF2337;
             text-align: center;
             font-family: sans-serif;
-            margin-left: 20px;
+            margin: 15px;
+            width: 800px;
             font-size: 19px;
-        }
-        
-        .buton__sumit {
-            background-color: #CF2337;
-            cursor: pointer;
-            margin-left: 15px;
-            margin-right: 15px;
-            display: block;
-            text-align: center;
         }
         
         .buton__sumit:hover {
@@ -611,17 +610,17 @@
         <form id="formulario" method="post" action="#">
             <ul class="ul01">
                 <li>
-                    <label for="nombre">Nombre Completo: <i style="font-size: 30px;margin-left: 20px;" class="fas fa-user"></i></label>
-                    <input type="text" id="nombre " placeholder="Ej. Luis" required>
+                    <label id="btnXD" for="nombre">Nombre Completo: <i style="font-size: 30px;margin-left: 20px;" class="fas fa-user"></i></label>
+                    <input type="text" id="nombre " placeholder="Ej. Luis" required name="nombre">
                 </li>
                 <li>
-                    <label for="apellido ">Apellido Completo:<i style="font-size: 30px;margin-left: 20px;" class="fas fa-user"></i></label>
-                    <input type="text" id="apellido" placeholder="Ej. Flores" required>
+                    <label id="btnXD" for="apellido">Apellido Completo:<i style="font-size: 30px;margin-left: 20px;" class="fas fa-user"></i></label>
+                    <input type="text" id="apellido" placeholder="Ej. Flores" required name="apellido">
                 </li>
 
                 <li>
-                    <label for="dni">Documento:<i class="far fa-id-card" style="font-size: 30px; margin: auto;"></i></label>
-                    <input type="text" id="dni" placeholder="Ej. 123456789" required pattern="[0-9]{8}" title="Debe poner 8 números y una letra">
+                    <label id="btnXD" for="documento">Documento:<i class="far fa-id-card" style="font-size: 30px; margin: auto;"></i></label>
+                    <input type="text" id="dni" placeholder="Ej. 123456789" name="dni" required title="Debe poner 8 números y una letra">
                 </li>
 
             </ul>
@@ -629,19 +628,19 @@
             <ul class="ul02">
 
                 <li>
-                    <label for="correo">Correo Electronico: <i class="fas fa-envelope" style="font-size: 30px;margin-left: 20px;"></i> </label>
-                    <input style="border: none; margin: 5px;" type="email" id="correo" placeholder="Ej. 123@hotmail.com" required>
+                    <label id="btnXD" for="email">Correo Electronico: <i class="fas fa-envelope" style="font-size: 30px;margin-left: 20px;"></i> </label>
+                    <input id="correo" style="border: none; margin: 5px;" name="email" type="email" placeholder="Ej. 123@hotmail.com" required>
                 </li>
                 <li>
                     <label for="lugarorigen">Lugar de Origen: <i class="fas fa-map-marker-alt" style="font-size: 30px;margin-left: 20px;"></i></label>
-                    <select id="lugarorigen">
+                    <select id="lugarorigen" name="lugarorigen">
                         <option value="0"></option>
                        <option value="1">Lima</option>
                     </select>
                 </li>
                 <li>
                     <label for="lugardestino">Lugar de Destino: <i class="fas fa-plane-departure" style="font-size: 30px;margin-left: 20px;"></i></label>
-                    <select id="lugardestino">
+                    <select id="lugardestino" name="lugardestino">
                         <option value="0"></option>
                       <option value="1">Chiclayo</option>
                       <option value="2">Tarapoto</option>
@@ -662,7 +661,7 @@
                 <div style="display: flex; justify-content: space-between;">
                     <li>
                         <label for="fechaida">Ida:</label>
-                        <input type="date" id="fechaida"></li>
+                        <input type="date" name="fechaida" id="fechaida"></li>
 
                     <li id="inusualfail">
                         <label for="fecharegreso">Regreso:</label>
@@ -671,15 +670,10 @@
                 </div>
             </ul>
 
+            <button id="btnXD" onclick="mostrarAlert()" type="submit">Reservar Viaje</button>
 
 
-            <li style="list-style: none;" class="buton__sumit">
-                <button type="submit">Reservar Viaje</button>
-            </li>
 
-
-            <br>
-            <button onclick="mostrar()">Mostrar :v </button>
 
         </form>
     </div>
@@ -809,47 +803,85 @@
                 </div>
                 <div class="box__footer ">
                     <h2>Destinos</h2>
-                    <a href="# ">Proyecto 01</a>
-                    <a href="# ">Proyecto 02</a>
-                    <a href="# ">Proyecto 03</a>
-                    <a href="# ">Proyecto 04</a>
+                    <a href="arequipa.html">Arequipa</a>
+                    <a href="tarapoto.html">Tarapoto</a>
+                    <a href="piura.html">Piura</a>
+                    <a href="cusco.html">Cusco</a>
                 </div>
                 <div class="box__footer ">
                     <h2>Contacto</h2>
-                    <a href="# ">Colegio</a>
-                    <a href="# ">Información</a>
-                    <a href="# ">Instituto</a>
-                    <a href="# ">Contacto</a>
+                    <a href="contacto.html">Contactanos</a>
+
                 </div>
-                <div class="box__footer ">
-                    <h2>Redes Sociales</h2>
-                    <a href="https://www.facebook.com/ " target="_blank "><i class="fab fa-facebook-square "></i> Facebook</a>
-                    <a href="https://api.whatsapp.com/send?phone=+51979043472&text=Hola%20Samuel!!%20me%20gusto%20mucho%20el%20dise%C3%B1o%20de%20tu%20pagina " target="_blank "><i class="fab fa-whatsapp-square "></i> WhatsApp</a>
-                    <a href="https://www.instagram.com/ " target="_blank "><i class="fab fa-instagram-square "></i> Instagram</a>
-                </div>
+
             </div>
             <div class="box__copyright ">
                 <hr>
-                <p><b>Todos los derechos reservados © 2021 Samuel Lls</p>
+                <p><b>Todos los derechos reservados © 2021 DeveloperTravel</p>
     </div>
 </footer>
+ <script src="../Bootstrap/bootstrap.bundle.min.js"></script>
+ <script src="../Bootstrap/jquery-3.5.1.slim.min.js"></script>
 <script>
 
+var vNombre = "";
+var vApellido = "";
+var vDni = 0;
+var vCorreo = "";
+
+function mostrarAlert() {
+    var ValidaInput = true
     
-    var formulario = document.getElementById('formulario');
-formulario.addEventListener('submit', function(event) {
-    swal.fire({
-        title: "Are you sure?",
-  text: "Once deleted, you will not be able to recover this imaginary file!",
-  icon: "warning",
-  buttons: true,
-  dangerMode: true,
-imageUrl: `img/ica.jpg`,
-imageHeight: 412,  
-});
+    vNombre = document.getElementById('nombre').value;
+    vApellido = document.getElementById('apellido').value;
+    vDni = document.getElementById('dni').value;
+    vCorreo = document.getElementById('correo').value;
+
+    if (vNombre.length === 0){
+
+        document.getElementById('MsjNombre').innerHTML = "Debe ingresar un Nombre ";
+        ValidaInput = false;
+        document.getElementById("btnEnviar").disabled = true;
+    } else {
+        document.getElementById("MsjNombre").innerHTML = "";
+        document.getElementById("MsjResultado").innerHTML = "";
+    }
     
-    event.preventDefault();
-}); 
+if (vCorreo.length === 0) {
+        // alert("Debe Ingresar un Correo Electronico")
+        document.getElementById("MsjEmail").innerHTML = "Debe ingresar un Email";
+        validaInput = false;
+        document.getElementById("btnEnviar").disabled = true;
+    } else {
+        document.getElementById("MsjEmail").innerHTML = "";
+        document.getElementById("MsjResultado").innerHTML = "";
+    }
+    if (vDni.length === 0) {
+        // alert("Debe Ingresar un numero telefonico")
+
+        document.getElementById("MsjTelefono").innerHTML = "Debe ingresar un Telefono";
+        validaInput = false;
+        document.getElementById("btnEnviar").disabled = true;
+    } else {
+        document.getElementById("MsjTelefono").innerHTML = "";
+        document.getElementById("MsjResultado").innerHTML = "";
+    }
+
+    if (validaInput) {
+        //alert("Hola " + vNombre + ", Te estaremos respodiendo a este correo  " + vEmail + " o espera nuestra llamada al nº  " + vTelefono);
+
+
+        document.getElementById("MsjNombre").innerHTML = "";
+        document.getElementById("MsjEmail").innerHTML = "";
+        document.getElementById("MsjTelefono").innerHTML = "";
+        document.getElementById("MsjResultado").innerHTML = vNombre + ", Te estaremos respondiendo al siguiente correo  " + vCorreo + " ,o le llamaremos al siguiente numero " + vDni;
+        document.getElementById("btnEnviar").disabled = false;
+
+    }
+
+} 
+
+
 var paisorigen = document.getElementById('lugarorigen');
 var paisdestino = document.getElementById('lugardestino');
 var mensaje = document.getElementById('mensaje');
@@ -871,5 +903,32 @@ tipo1.addEventListener('click', function() {
 </script>
     
 </body>
+
+<div class="modal fade" id="ModalAdvertencia" tabindex="-1" aria-labelledby="ModalAdvertenciaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ModalAdvertenciaLabel">!Completar!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <p id="MsjNombre"></p>
+
+                <p id="MsjEmail"></p>
+
+                <p id="MsjTelefono"></p>
+
+                <p id="MsjResultado"></p>
+
+            </div>
+            <div class="modal-footer">
+                <button id="btnEnviar" data-dismiss="modal" type="button" class="btn btn-success">Enviar</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>
